@@ -112,7 +112,7 @@
     </link>
 
     <gazebo reference="right_wheel">
-        <material>Gazebo/Orange</material>
+        <material>Gazebo/Blue</material>
     </gazebo>
 
 
