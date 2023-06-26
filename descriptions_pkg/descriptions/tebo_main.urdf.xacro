@@ -3,7 +3,7 @@
 
     <xacro:include filename="tebo_shape.xacro" />
 
-    <xacro:include filename="tebo_gazebo.xacro"/>
+    <xacro:include filename="tebo_ros2_control.xacro"/>
 
     <xacro:include filename="tebo_Glidar.xacro"/>
     

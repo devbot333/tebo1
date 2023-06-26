@@ -52,6 +52,28 @@
         <material>Gazebo/White</material>
     </gazebo>
 
+    <!-- ____LOGO____ -->
+
+    <joint name="face_joint" type="fixed">
+        <parent link="chassis"/>
+        <child link="text_link"/>
+        <origin xyz="${chassis_length} 0 ${chassis_height/2}" rpy="0 0 0"/>
+    </joint>
+
+    <link name="text_link">
+      <visual>
+        <origin xyz="0.01 0.005 0.01" rpy="${pi/2} 0 ${pi/2}"/>
+         <geometry>
+          <mesh filename="/home/danana/Downloads/ImageToStl.com_dark.stl" scale="0.002 0.002 0.002" />
+        </geometry>
+        <material name="blue"/>
+      </visual>
+    </link>
+
+    <gazebo reference="text_link">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
     <!-- LEFT WHEEL LINK -->
 
     <joint name="left_wheel_joint" type="continuous">
@@ -66,7 +88,7 @@
             <geometry>
                 <cylinder radius="${wheel_radius}" length="${wheel_thickness}"/>
             </geometry>
-            <material name="blue"/>
+            <material name="orange"/>
         </visual>
         <collision>
             <geometry>
@@ -79,7 +101,7 @@
     </link>
 
     <gazebo reference="left_wheel">
-        <material>Gazebo/Blue</material>
+        <material>Gazebo/Orange</material>
     </gazebo>
 
 
@@ -99,7 +121,7 @@
             <geometry>
                 <cylinder radius="${wheel_radius}" length="${wheel_thickness}"/>
             </geometry>
-            <material name="blue"/>
+            <material name="orange"/>
         </visual>
         <collision>
             <geometry>
@@ -112,7 +134,7 @@
     </link>
 
     <gazebo reference="right_wheel">
-        <material>Gazebo/Blue</material>
+        <material>Gazebo/Orange</material>
     </gazebo>
 
 
@@ -130,7 +152,7 @@
             <geometry>
                 <sphere radius="${caster_wheel_radius}"/>
             </geometry>
-            <material name="white"/>
+            <material name="black"/>
         </visual>
         <collision>
             <geometry>
@@ -143,7 +165,7 @@
     </link>
 
     <gazebo reference="caster_wheel">
-        <material>Gazebo/Orange</material>
+        <material>Gazebo/Black</material>
         <mu1 value="0.001"/>
         <mu2 value="0.001"/>
     </gazebo>
